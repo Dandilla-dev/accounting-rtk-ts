@@ -6,7 +6,8 @@ import {Route, Routes} from "react-router";
 
 
 function App() {
-
+// TODO implement  token retrieval from global state logic
+    const token = 'dfdfdfdf'
   return (
    <Routes>
      <Route path={'/'} element={<Guest/>}/>
