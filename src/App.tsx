@@ -2,16 +2,16 @@
 import './App.css'
 import Guest from "./components/Guest";
 import Profile from "./components/Profile";
-import {Route, Routes} from "react-router";
+import {Navigate, Route, Routes} from "react-router";
 
 
 function App() {
 // TODO implement  token retrieval from global state logic
-    const token = 'dfdfdfdf'
+    const token = 'fdfdf'
   return (
    <Routes>
-     <Route path={'/'} element={<Guest/>}/>
-     <Route path={'/profile'} element={<Profile/>}/>
+     <Route path={'/'} element={token ? <Navigate to="/profile"/> : <Guest/>}/>
+     <Route path={'/profile'} element={token ? <Profile/> : <Navigate to="/"/>}/>
    </Routes>
   )
 }
