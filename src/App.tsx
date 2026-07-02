@@ -10,8 +10,8 @@ function App() {
     const token = 'fdfdf'
   return (
    <Routes>
-     <Route path={'/'} element={token ? <Navigate to="/profile"/> : <Guest/>}/>
-     <Route path={'/profile'} element={token ? <Profile/> : <Navigate to="/"/>}/>
+     <Route path={'/'} element={token ? <Navigate to={"/profile"} replace/> : <Guest/>}/>
+     <Route path={'/profile'} element={token ? <Profile/> : <Navigate to={"/"} replace/>}/>
    </Routes>
   )
 }
